@@ -1,0 +1,17 @@
+def canJump_naive(nums):
+    n = len(nums)
+
+    def backtrack(position):
+        if position == n - 1:
+            return True
+        
+        max_jump = nums[position]
+        
+        for step in range(1, max_jump + 1):
+            next_pos = position + step
+            if next_pos < n:
+                if backtrack(next_pos):
+                    return True
+        
+        return False
+    return backtrack(0)

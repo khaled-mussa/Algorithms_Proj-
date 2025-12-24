@@ -1,4 +1,4 @@
-def canJump_naive(nums):
+def canJump(nums):
     n = len(nums)
 
     def backtrack(position):

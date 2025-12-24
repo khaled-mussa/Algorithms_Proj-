@@ -6,7 +6,6 @@ def canJump(nums):
         if i > maxReach:
             return False
         
-         maxReach
         maxReach = max(maxReach, i + nums[i])
       
         if maxReach >= len(nums) - 1:
